@@ -16,6 +16,7 @@
     "@testing-library/react": "^16.0.0",
     "antd": "^5.19.3",
     "axios": "^1.7.2",
+    "formik": "^2.4.6",
     "lodash": "^4.17.21",
     "path": "^0.12.7",
     "qs": "^6.12.3",
@@ -24,7 +25,8 @@
     "react-router-dom": "^6.25.1",
     "react-toastify": "^10.0.5",
     "sass": "^1.77.8",
-    "vitest": "^2.0.4"
+    "vitest": "^2.0.4",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",

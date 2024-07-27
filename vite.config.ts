@@ -11,6 +11,10 @@ export default defineConfig({
       pages: path.resolve(__dirname, "./src/pages"),
       modules: path.resolve(__dirname, "./src/modules/"),
       hooks: path.resolve(__dirname, "./src/hooks/"),
+      routes: path.resolve(__dirname, "./src/routes/"),
+      container: path.resolve(__dirname, "./src/container/"),
+      helpers: path.resolve(__dirname, "./src/helpers/"),
+      services: path.resolve(__dirname, "./src/services/"),
     },
   },
 });

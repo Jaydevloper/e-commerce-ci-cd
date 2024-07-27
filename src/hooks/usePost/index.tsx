@@ -1,4 +1,5 @@
 import { useMutation } from "@tanstack/react-query";
+import { AxiosRequestConfig } from "axios";
 import { toast } from "react-toastify";
 import api from "services/api";
 import QueryBuilder from "services/queryBuilder";
@@ -6,7 +7,10 @@ import { TMethod, TParams } from "services/types/index.type";
 
 interface IProps {
   url: string;
+  name: string;
   method: TMethod;
+  data: unknown;
+  config?: AxiosRequestConfig;
   params?: TParams;
 }
 interface IPostProps {
@@ -18,8 +22,12 @@ interface IPostProps {
 
 // eslint-disable-next-line react-refresh/only-export-components
 const PostData = async (props: IProps) => {
-  const { url, method = "post", params } = props;
-  return await api[method](QueryBuilder({ url, params: params || {} }));
+  const { url, method = "post", params, data, config } = props;
+  return await api[method](
+    QueryBuilder({ url, params: params || {} }),
+    data,
+    config
+  );
 };
 
 const usePost = ({
