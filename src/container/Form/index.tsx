@@ -6,10 +6,18 @@ import React from "react";
 import { IForm, MyFormikProps } from "./form.type";
 
 const FormContent: React.FC<IForm> = (props) => {
-  const { url, name, params, children, fields, ...postOptions } = props;
+  const {
+    url,
+    name,
+    params = {},
+    extraParams = {},
+    children,
+    fields,
+    ...postOptions
+  } = props;
   const mututePost = usePost({ ...postOptions });
   return (
-    <div>
+    <React.Fragment>
       <Formik
         initialValues={
           isArray(fields)
@@ -32,13 +40,14 @@ const FormContent: React.FC<IForm> = (props) => {
             name,
             method: "post",
             params,
+            extraParams,
             data: values,
           });
         }}
       >
         {(formikProps: MyFormikProps) => <Form>{children(formikProps)}</Form>}
       </Formik>
-    </div>
+    </React.Fragment>
   );
 };
 

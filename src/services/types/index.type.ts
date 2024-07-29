@@ -4,6 +4,9 @@ export type TParams = {
   filter?: string;
   sort?: string;
 };
+export type TExtraQuery = {
+  // empty
+};
 export type TFieldtypes =
   | "string"
   | "number"

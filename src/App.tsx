@@ -1,9 +1,10 @@
+import "./assets/scss/index.scss";
+import InputText from "components/fields/input-text";
 import Container from "container";
-import Routes from "./routes/routes";
+import { Field } from "formik";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { ErrorMessage, Field } from "formik";
-
+import Routes from "./routes/routes";
 function App() {
   return (
     <>
@@ -12,6 +13,9 @@ function App() {
       <Container.Form
         url=""
         name=""
+        params={{
+          filter: "test",
+        }}
         fields={[
           {
             name: "test",
@@ -23,9 +27,10 @@ function App() {
       >
         {() => (
           <>
-            <Field name="test" />
-            <ErrorMessage name="test" />
-            <button type="submit">Test</button>
+            <Field name="test" component={InputText} />
+            <button className="bg-red-700" type="submit">
+              Test
+            </button>
           </>
         )}
       </Container.Form>

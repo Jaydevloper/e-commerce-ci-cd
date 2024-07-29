@@ -1,20 +1,24 @@
 import { IQueryProps } from "./queryBuilder.type";
 
 const QueryBuilder = (props: IQueryProps) => {
-  const { url, params } = props;
-  let str: string = "";
-  const obj = {
-    filter: "",
-    sort: "",
-  };
-  for (const [key, value] of Object.entries(obj)) {
-    if (params[key]) {
-      params[key] = value;
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      str = "?" + new URLSearchParams(params).toString();
-    }
-  }
+  const { url, params, extraParams } = props;
 
-  return url + str;
+  const combinedParams = { ...params, ...extraParams };
+
+  const extraParamsRecord: Record<string, string> = Object.fromEntries(
+    Object.entries(extraParams || {}).map(([key, value]) => [
+      key,
+      String(value),
+    ])
+  );
+  const queryParams = { ...combinedParams, ...extraParamsRecord };
+
+  const queryParamsRecord: Record<string, string> = Object.fromEntries(
+    Object.entries(queryParams).map(([key, value]) => [key, String(value)])
+  );
+  const queryString = new URLSearchParams(queryParamsRecord).toString();
+
+  return url + (queryString ? `?${queryString}` : "");
 };
+
 export default QueryBuilder;

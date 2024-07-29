@@ -3,7 +3,7 @@ import { AxiosRequestConfig } from "axios";
 import { toast } from "react-toastify";
 import api from "services/api";
 import QueryBuilder from "services/queryBuilder";
-import { TMethod, TParams } from "services/types/index.type";
+import { TExtraQuery, TMethod, TParams } from "services/types/index.type";
 
 interface IProps {
   url: string;
@@ -12,6 +12,7 @@ interface IProps {
   data: unknown;
   config?: AxiosRequestConfig;
   params?: TParams;
+  extraParams?: TExtraQuery;
 }
 interface IPostProps {
   success?: boolean;
@@ -22,9 +23,16 @@ interface IPostProps {
 
 // eslint-disable-next-line react-refresh/only-export-components
 const PostData = async (props: IProps) => {
-  const { url, method = "post", params, data, config } = props;
+  const {
+    url,
+    method = "post",
+    params = {},
+    extraParams = {},
+    data,
+    config,
+  } = props;
   return await api[method](
-    QueryBuilder({ url, params: params || {} }),
+    QueryBuilder({ url, params, extraParams }),
     data,
     config
   );
