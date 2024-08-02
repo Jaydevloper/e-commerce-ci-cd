@@ -1,4 +1,4 @@
 const SignUp = () => {
-  return <></>;
+  return <>SignUp</>;
 };
 export default SignUp;
