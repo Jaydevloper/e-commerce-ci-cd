@@ -1,11 +1,12 @@
 import { Select } from "antd";
 import { ErrorMessage } from "formik";
 import { ISelectProps } from "./select.form";
+import useHooks from "hooks/useHooks";
 
 const InputSelect = (props: ISelectProps) => {
   const {
     rootClassName,
-    form: { setFieldValue },
+    form: { setFieldValue, setFieldTouched, touched, errors },
     field: { value, name },
     onChange = () => {},
     label = "",
@@ -13,6 +14,7 @@ const InputSelect = (props: ISelectProps) => {
     options = [],
     ...otherProps
   } = props;
+  const { get } = useHooks();
   return (
     <>
       <div className="flex flex-col ">
@@ -25,6 +27,8 @@ const InputSelect = (props: ISelectProps) => {
             setFieldValue(name, e);
             onChange(e);
           }}
+          onBlur={() => setFieldTouched(name, true)}
+          status={get(touched, name) && get(errors, name) ? "error" : ""}
           disabled={isDisabled}
           options={options}
           value={value}
