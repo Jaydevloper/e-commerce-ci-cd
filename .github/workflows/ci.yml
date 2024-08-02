@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 18.20.2
-      - run: npm ci
+      - run: npm install
       - name: Linting
         run: npm run lint
       - name: Tests
