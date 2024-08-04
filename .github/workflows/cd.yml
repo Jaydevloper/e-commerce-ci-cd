@@ -19,10 +19,3 @@ jobs:
       - run: npm install
       - name: Deploy
         run: npm run build
-      - name: Install semantic-release
-        run: npm install semantic-release@19 @semantic-release/changelog @semantic-release/git @semantic-release/github
-      - name: Create Release
-        run: npx semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEBUG: semantic-release:*
