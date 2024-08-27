@@ -74,3 +74,19 @@ a:hover {
 .ant-tabs .ant-tabs-tab-btn {
   color: #108a00;
 }
+.ant-input {
+  &-affix-wrapper {
+    display: flex;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    flex-direction: row-reverse;
+    border: none;
+    background-color: #f5f5f5 !important;
+  }
+  &-prefix {
+    svg {
+      width: 27px;
+      height: 30px;
+    }
+  }
+}

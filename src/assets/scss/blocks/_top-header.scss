@@ -1,0 +1,12 @@
+.top-header {
+  &__select {
+    .ant-select-selector {
+      background-color: transparent !important;
+      border: none !important;
+      color: #fff;
+    }
+    .ant-select-arrow {
+      color: #fff;
+    }
+  }
+}
