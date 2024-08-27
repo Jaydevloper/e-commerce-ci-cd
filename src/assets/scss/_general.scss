@@ -1,3 +1,5 @@
+@import "./mixin";
+
 * {
   scroll-behavior: smooth !important;
 }
@@ -87,6 +89,20 @@ a:hover {
     svg {
       width: 27px;
       height: 30px;
+    }
+  }
+
+  @include media(570px) {
+    &-affix-wrapper {
+      max-width: 150px;
+      width: 100%;
+      font-size: 7px;
+    }
+    &-prefix {
+      svg {
+        width: 15px;
+        height: 20px;
+      }
     }
   }
 }

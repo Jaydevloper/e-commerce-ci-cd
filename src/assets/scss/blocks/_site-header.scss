@@ -1,1 +1,23 @@
+@import "../mixin";
+.site-header {
+  &__wrapper {
+    @include media(990px) {
+      &-menu {
+        display: none;
+      }
 
+      &-right {
+        a {
+          display: none;
+        }
+      }
+    }
+
+    @include media(570px) {
+      gap: 12px;
+      &-logo {
+        font-size: 18px;
+      }
+    }
+  }
+}

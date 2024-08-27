@@ -3,6 +3,7 @@ import { Content } from "antd/es/layout/layout";
 import { Outlet } from "react-router-dom";
 import HeaderMenu from "./header";
 import TopHeader from "./header/components/top-header";
+import MenuFooter from "./footer";
 
 const LayoutMenu = () => {
   return (
@@ -16,6 +17,7 @@ const LayoutMenu = () => {
             <Outlet />
           </div>
         </Content>
+        <MenuFooter />
       </Layout>
     </>
   );

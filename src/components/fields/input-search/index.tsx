@@ -12,7 +12,7 @@ const InputSearch = (props: SearchFormProps) => {
   } = props;
   return (
     <>
-      <div className={"w-[276px] " + className}>
+      <div className={"max-w-[276px] w-[100%] " + className}>
         <Search
           placeholder={placeholder}
           disabled={disabled}

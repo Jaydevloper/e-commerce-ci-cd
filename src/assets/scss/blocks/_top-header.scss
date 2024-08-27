@@ -1,3 +1,5 @@
+@import "../mixin";
+
 .top-header {
   &__select {
     .ant-select-selector {
@@ -7,6 +9,19 @@
     }
     .ant-select-arrow {
       color: #fff;
+    }
+  }
+
+  @include media(570px) {
+    &__wrapper {
+      &-texts {
+        h1 {
+          font-size: 10px;
+        }
+        a {
+          font-size: 10px;
+        }
+      }
     }
   }
 }
