@@ -7,8 +7,8 @@ import DownloadApp from "./components/download";
 
 const MenuFooter = () => {
   return (
-    <footer className="bg-[#000] pt-[30px] pb-6">
-      <div className="grid grid-cols-5 gap-[87px] container">
+    <footer className="site-footer bg-[#000] pt-[30px] pb-6">
+      <div className="site-footer__wrapper grid grid-cols-5 gap-[87px] container">
         <Exclusive />
         <Support />
         <Account />

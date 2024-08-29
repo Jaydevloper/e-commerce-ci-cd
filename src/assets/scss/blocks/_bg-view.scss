@@ -1,0 +1,13 @@
+.bg-view {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &__top-menu-ad {
+    width: 892px;
+    height: 344px;
+    &-first {
+      background-image: url("../../imgs/top-menu-ad-first.png");
+    }
+  }
+}

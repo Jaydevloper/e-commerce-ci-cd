@@ -1,0 +1,35 @@
+@import "../mixin";
+.site-footer {
+  &__wrapper {
+    &-item {
+      &-input {
+        font-size: 16px;
+        line-height: 1.5;
+        border: 1px solid #fafafa;
+        color: #fafafa;
+        background-color: transparent !important;
+        input {
+          &::placeholder {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #fafafa;
+          }
+        }
+      }
+    }
+  }
+
+  @include media(1060px) {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 30px;
+      &-item {
+        &-list-item {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
