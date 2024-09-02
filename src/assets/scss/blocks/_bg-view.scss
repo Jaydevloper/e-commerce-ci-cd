@@ -9,7 +9,9 @@
     &-first {
       background-image: url("../../imgs/top-menu-ad-first.png");
     }
-    &-second{
+    &-second {
+      width: 808px !important;
+      height: 344px;
       background-image: url("../../imgs/top-menu-ad-second.png");
     }
   }

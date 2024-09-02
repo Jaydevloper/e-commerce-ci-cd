@@ -76,6 +76,23 @@ a:hover {
 .ant-tabs .ant-tabs-tab-btn {
   color: #108a00;
 }
+.slick-dots-bottom {
+  bottom: 20px !important;
+}
+.slick-dots li {
+  button {
+    border-radius: 50% !important;
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+.slick-dots li.slick-active {
+  width: 16px !important;
+  button {
+    background: #db4444 !important;
+    border: 2px solid #fff;
+  }
+}
 .ant-input {
   &-affix-wrapper {
     display: flex;
