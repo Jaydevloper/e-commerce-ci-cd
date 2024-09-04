@@ -4,15 +4,10 @@
   background-size: contain;
 
   &__top-menu-ad {
-    width: 892px;
-    height: 344px;
+    width: 1200px !important;
+    height: 500px;
     &-first {
       background-image: url("../../imgs/top-menu-ad-first.png");
-    }
-    &-second {
-      width: 808px !important;
-      height: 344px;
-      background-image: url("../../imgs/top-menu-ad-second.png");
     }
   }
 }
