@@ -2,11 +2,12 @@ import { Button, Carousel } from "antd";
 import { CarouselRef } from "antd/es/carousel";
 import NextArrowIcon from "assets/icons/next-arrow-icon";
 import PrevArrowIcon from "assets/icons/prev-arrow-icon";
+import imgCard from "assets/imgs/cart.png";
 import ButtonRed from "components/buttons/button-red";
 import Card from "components/card";
 import MarkName from "components/mark-name";
 import { useRef } from "react";
-import imgCard from "assets/imgs/cart.png";
+import Timer from "./timer";
 
 const FlashSales = () => {
   const CaruselRef = useRef<CarouselRef>(null);
@@ -21,9 +22,11 @@ const FlashSales = () => {
     <div className="border-b-[1px] border-solid pb-[60px] mt-[152px] mb-[80px]">
       <MarkName text="Today's" />
       <div className="flex justify-between items-center mt-[24px] mb-[31px]">
-        <div>
-          <h2 className="font-semibold text-4xl">Flash Sales</h2>
-          <time className="font-bold text-3xl"></time>
+        <div className="flex items-center gap-[87px]">
+          <h2 className="font-semibold text-4xl mt-4">Flash Sales</h2>
+          <time className="font-bold text-3xl flex itmems-center gap-[20px]">
+            <Timer />
+          </time>
         </div>
         <div className="flex gap-2">
           <Button
