@@ -61,15 +61,11 @@ button {
   cursor: pointer;
   &:hover {
     svg {
-      fill: #69b1ff;
+      fill: #db4444;
     }
   }
 }
-a:hover {
-  svg {
-    fill: #69b1ff;
-  }
-}
+
 .ant-layout {
   background: #fff;
 }
