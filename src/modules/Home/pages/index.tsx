@@ -1,3 +1,4 @@
+import CustomRoll from "components/custom-roll";
 import FlashSales from "../components/flash-sales";
 import Menu from "../components/menu";
 import NewArrival from "../components/new-arrival";
@@ -10,6 +11,7 @@ const Home = () => {
       <Menu />
       <FlashSales />
       <NewArrival />
+      <CustomRoll />
     </div>
   );
 };

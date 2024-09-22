@@ -61,7 +61,7 @@ const MainSection = ({ data }: { data: TProducts }) => {
 
           <div className="border-solid border-t-[1px] pt-6">
             <Button className="py-6 px-12 mr-4">Add to Cart</Button>
-            <ButtonRed></ButtonRed>
+            <ButtonRed>Buy</ButtonRed>
             <p className="text-xl font-semibold mt-4">
               <SyncOutlined spin /> {get(data, "returnPolicy")}
             </p>
