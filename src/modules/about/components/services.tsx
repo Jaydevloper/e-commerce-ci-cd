@@ -5,7 +5,7 @@ import CustomRoll from "components/custom-roll";
 
 const Services = () => {
   return (
-    <div className="grid grid-cols-3 container  !mt-[140px] ">
+    <div className="grid grid-cols-3  container !mt-[140px] ">
       <CustomRoll
         title="FREE AND FAST DELIVERY"
         text="Free delivery for all orders over $140"
