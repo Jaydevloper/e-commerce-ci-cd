@@ -16,7 +16,7 @@ const HeaderMenu = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
             <Link to="/about">About</Link>

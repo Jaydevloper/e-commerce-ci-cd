@@ -7,6 +7,7 @@ const Login = lazy(() => import("pages/login"));
 const Home = lazy(() => import("modules/Home/pages"));
 const ProductView = lazy(() => import("modules/products/pages/view"));
 const About = lazy(() => import("modules/about/pages"));
+const Contact = lazy(() => import("modules/contact/pages"));
 
 const router = () => {
   return createBrowserRouter([
@@ -39,6 +40,10 @@ const router = () => {
         {
           path: "about/",
           element: <About />,
+        },
+        {
+          path: "contact/",
+          element: <Contact />,
         },
       ],
     },
