@@ -1,4 +1,5 @@
 import { InputProps } from "antd";
+import { TextAreaProps } from "antd/es/input";
 import { FieldProps } from "formik";
 
 export interface ICustomprops extends InputProps {
@@ -10,4 +11,4 @@ export interface ICustomprops extends InputProps {
   onChange?: (value: unknown) => void;
 }
 
-export type TFieldprops = ICustomprops & FieldProps;
+export type TFieldprops = ICustomprops & FieldProps & TextAreaProps;

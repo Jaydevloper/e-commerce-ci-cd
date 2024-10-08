@@ -1,16 +1,16 @@
-import { Input } from "antd";
-import { ErrorMessage } from "formik";
 import useHooks from "hooks/useHooks";
 import { TFieldprops } from "../fields.type";
-const InputText = (props: TFieldprops) => {
+import TextArea from "antd/es/input/TextArea";
+import { ErrorMessage } from "formik";
+
+const InputTextArea = (props: TFieldprops) => {
   const {
     placeholder = "",
-    type = "text",
     rootClassName = "",
     isDisabled = false,
     label = "",
     field: { value, name },
-    form: { setFieldValue, setFieldTouched, touched, errors },
+    form: { setFieldValue, touched, errors },
     onChange = () => {},
     ...otherProps
   } = props;
@@ -21,9 +21,8 @@ const InputText = (props: TFieldprops) => {
         {label ? (
           <label className="mb-1 text-base text-[#9a9a9a]">{label}</label>
         ) : null}
-        <div className={"max-w-[340px] w-[100%] input-text " + rootClassName}>
-          <Input
-            type={type}
+        <div className={" w-[100%] input-text " + rootClassName}>
+          <TextArea
             size="large"
             placeholder={placeholder}
             value={value}
@@ -35,12 +34,9 @@ const InputText = (props: TFieldprops) => {
               setFieldValue(name, e.target.value);
               onChange(e);
             }}
-            onBlur={() => {
-              setFieldTouched(name, true);
-            }}
             disabled={isDisabled}
             {...otherProps}
-          />
+          ></TextArea>
         </div>
       </div>
       <p className="text-red-500">
@@ -49,5 +45,4 @@ const InputText = (props: TFieldprops) => {
     </>
   );
 };
-
-export default InputText;
+export default InputTextArea;

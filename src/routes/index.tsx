@@ -4,6 +4,7 @@ import Loader from "components/loader";
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 const Login = lazy(() => import("pages/login"));
+const SignUp = lazy(() => import("pages/signup"));
 const Home = lazy(() => import("modules/Home/pages"));
 const ProductView = lazy(() => import("modules/products/pages/view"));
 const About = lazy(() => import("modules/about/pages"));
@@ -12,10 +13,6 @@ const Contact = lazy(() => import("modules/contact/pages"));
 const router = () => {
   return createBrowserRouter([
     {
-      path: "/login",
-      element: <Login />,
-    },
-    {
       path: "/",
       element: <LayoutMenu />,
       loader: Loader,
@@ -23,6 +20,14 @@ const router = () => {
         {
           index: true,
           element: <Home />,
+        },
+        {
+          path: "sign-up",
+          element: <SignUp />,
+        },
+        {
+          path: "login",
+          element: <Login />,
         },
         {
           path: "products/",

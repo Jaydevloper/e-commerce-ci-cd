@@ -22,7 +22,7 @@ const HeaderMenu = () => {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/">Sign up</Link>
+            <Link to="/sign-up">Sign up</Link>
           </li>
         </ul>
 
